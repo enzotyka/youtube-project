@@ -17,11 +17,17 @@ import VideoIcon from "../../assets/video.png";
 import NotificationICon from "../../assets/sino.png";
 
 
-function Header(){
+interface IProps {
+    openMenu: boolean, 
+    setOpenMenu: (openMenu: boolean) => void
+}
+
+
+function Header({ openMenu, setOpenMenu}: IProps){
     return(
         <Container>
             <LogoContainer>
-            <ButtonContainer margin='0 10px 0 0'>
+            <ButtonContainer onClick={() => setOpenMenu(!openMenu)} margin='0 10px 0 0'>
                 <ButtonIcon alt="" src={HamburguerIcon} />
             </ButtonContainer>
             <img 

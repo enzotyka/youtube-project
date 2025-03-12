@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    width: 250px;
+export const Container = styled.div<{ openMenu: boolean}>`
+    width: ${({openMenu}) => openMenu? '250px' : '100px'};
     height: 100vh;
     box-sizing: border-box;
     padding: 65px 10px 10px 10px;
