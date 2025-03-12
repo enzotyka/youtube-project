@@ -17,26 +17,25 @@ export const LogoContainer = styled.div`
     align-items: center;
 `;
 
-export const ButtonContainer = styled.div<{ margin?: string}>`
+export const ButtonContainer = styled.div<{ margin?: string }>`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin: ${({ margin }) => margin? margin : 0};
+    margin: ${({ margin }) => (margin ? margin : "0")};
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+   
 
-    :hover {
+    &:hover {
         background-color: #f2f2f2;
-        border-radius: 50%;
-        
     }
 `;
 
 export const ButtonIcon = styled.img`
     width: 20px;
-
+    
 `;
 
 export const SearchContainer = styled.div`
